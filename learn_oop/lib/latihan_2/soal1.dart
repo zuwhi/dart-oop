@@ -2,7 +2,9 @@ class Hewan {
   String? nama;
   String? suara;
 
-  void tampilSuara(suara) {
+  Hewan(this.nama, this.suara);
+
+  void tampilSuara() {
     print("suaranya $suara");
   }
 }
@@ -10,20 +12,16 @@ class Hewan {
 class Kucing extends Hewan {
   String? jenisbulu;
 
-  void suaraKucing() {
-    tampilSuara('meowww');
-  }
+  Kucing(String nama, this.jenisbulu, String suara) : super(nama, suara);
 
   void intro() {
     print("nama kucing ini adalah $nama");
     print("dia mumpunyai jenis bulu $jenisbulu");
-    suaraKucing();
+    tampilSuara();
   }
 }
 
 void main() {
-  Kucing kucing = Kucing();
-  kucing.nama = 'tesla';
-  kucing.jenisbulu = 'lembut';
+  Kucing kucing = Kucing('tesla', 'lembut', 'moww');
   kucing.intro();
 }
