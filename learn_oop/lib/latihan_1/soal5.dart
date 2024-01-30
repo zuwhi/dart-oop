@@ -1,14 +1,19 @@
 class Warna {
-  final String? red;
-  final String? green;
-  final String? blue;
-
-  const Warna({this.red, this.green, this.blue});
+  final int red;
+  final int green;
+  final int blue;
+  const Warna(this.red, this.green, this.blue);
+  String toString() {
+    return 'Warna (Red: $red, Green: $green, Blue: $blue)';
+  }
 }
 
 void main() {
-  const Warna warna1 = Warna(red: "merah", green: "hijau", blue: "biru");
-  print(warna1.red);
-  print(warna1.green);
-  print(warna1.blue);
+  const Warna warnaMerah = Warna(255, 0, 0);
+  const Warna warnaHijau = Warna(0, 255, 0);
+  const Warna warnaBiru = Warna(0, 0, 255);
+
+  print('RGB warna merah adalah = $warnaMerah');
+  print('RGB warna Hijau adalah = $warnaHijau');
+  print('RGB warna Biru adalah = $warnaBiru');
 }
